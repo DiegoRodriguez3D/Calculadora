@@ -1,4 +1,4 @@
-package com.diegorb.calculadora.screens.calculadora.components
+package com.diegorb.calculadora.screens.pricipal.components
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.Composable
@@ -35,7 +35,7 @@ val rows = listOf(
         BotonTipo("+", ColorBoton.COLOR_OPERACION)
     ),
     listOf(
-        BotonTipo("<", ColorBoton.COLOR_ESPECIAL),
+        BotonTipo(color = ColorBoton.COLOR_ESPECIAL, icon = com.diegorb.calculadora.R.drawable.delete_icon),
         BotonTipo("0", ColorBoton.COLOR_NUMEROS),
         BotonTipo(".", ColorBoton.COLOR_NUMEROS),
         BotonTipo("=", ColorBoton.COLOR_OPERACION)
@@ -43,8 +43,9 @@ val rows = listOf(
 )
 
 data class BotonTipo(
-    val text: String,
-    val color: ColorBoton
+    val text: String = "",
+    val color: ColorBoton,
+    val icon: Int? = null
 )
 
 enum class ColorBoton {
@@ -56,7 +57,9 @@ enum class ColorBoton {
 
 @Composable
 fun GridBotones() {
-    Column(modifier = Modifier.padding(8.dp).fillMaxWidth()) {
+    Column(modifier = Modifier
+        .padding(vertical = 30.dp, horizontal = 15.dp)
+        .fillMaxWidth()) {
         rows.map {tipoBoton ->
             RowCalculadora(tipoBoton)
         }
@@ -65,12 +68,15 @@ fun GridBotones() {
 
 @Composable
 fun RowCalculadora(valor: List<BotonTipo>){
-    Row(modifier = Modifier.padding(5.dp).fillMaxWidth(), horizontalArrangement = Arrangement.SpaceEvenly) {
+    Row(modifier = Modifier
+        .padding(5.dp)
+        .fillMaxWidth(), horizontalArrangement = Arrangement.SpaceEvenly) {
         valor.map {tipoBoton ->
             BotonCalculadora(
                 modifier = Modifier,
                 symbol = tipoBoton.text,
                 color = tipoBoton.getTextColor(),
+                icon = tipoBoton.icon,
                 roundness = 12
             ) {
 

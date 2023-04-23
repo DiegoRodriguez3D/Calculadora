@@ -1,4 +1,4 @@
-package com.diegorb.calculadora.screens.calculadora.components
+package com.diegorb.calculadora.screens.pricipal.components
 
 import androidx.compose.runtime.Composable
 

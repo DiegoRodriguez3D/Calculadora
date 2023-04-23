@@ -1,4 +1,4 @@
-package com.diegorb.calculadora.screens.calculadora
+package com.diegorb.calculadora.screens.pricipal
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
