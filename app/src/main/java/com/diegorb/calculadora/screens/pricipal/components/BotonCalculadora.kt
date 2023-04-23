@@ -15,6 +15,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.diegorb.calculadora.ui.theme.FondoBotonOscuro
+import com.diegorb.calculadora.ui.theme.FondoCardOscuro
 
 @Composable
 fun BotonCalculadora(

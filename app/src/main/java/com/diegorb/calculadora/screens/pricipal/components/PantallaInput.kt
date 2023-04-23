@@ -10,14 +10,17 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.diegorb.calculadora.screens.pricipal.CalculadoraState
+import androidx.lifecycle.viewmodel.compose.viewModel
+import com.diegorb.calculadora.screens.pricipal.CalculadoraViewModel
 
 @Composable
-fun PantallaInput(state: CalculadoraState) {
+fun PantallaInput() {
+
+    val viewModel = viewModel<CalculadoraViewModel>()
+    val state = viewModel.state
 
     Text(
-        //text = state.numero1 + (state.operacion ?: "") + state.numero2,
-        text = "125 x 256",
+        text = state.numero1 + (state.operacion?.symbol ?: "") + state.numero2,
         textAlign = TextAlign.End,
         modifier = Modifier
             .fillMaxWidth()
@@ -29,8 +32,7 @@ fun PantallaInput(state: CalculadoraState) {
     )
 
     Text(
-        //text = state.numero1 + (state.operacion ?: "") + state.numero2,
-        text = "12312312",
+        text = state.numero1 + (state.operacion?.symbol ?: "") + state.numero2,
         textAlign = TextAlign.End,
         modifier = Modifier
             .fillMaxWidth()

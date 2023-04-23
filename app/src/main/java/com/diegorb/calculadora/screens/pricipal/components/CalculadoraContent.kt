@@ -8,25 +8,28 @@ import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
+import com.diegorb.calculadora.Accion
 import com.diegorb.calculadora.screens.pricipal.CalculadoraState
 import com.diegorb.calculadora.ui.theme.FondoCardOscuro
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalComposeUiApi::class)
 @Composable
-fun CalculadoraContent(state: CalculadoraState, modifier: Modifier = Modifier) {
+fun CalculadoraContent(
+    state: CalculadoraState,
+    modifier: Modifier = Modifier,
+) {
 
     ConstraintLayout(modifier = Modifier.fillMaxSize()) {
-        val (resultado, botones) = createRefs()
+        val (botones) = createRefs()
         Column(
             modifier = Modifier
                 .fillMaxWidth()
                 .constrainAs(botones) {
                     bottom.linkTo(parent.bottom)
-                }
-                , verticalArrangement = Arrangement.Center
+                }, verticalArrangement = Arrangement.Center
         ) {
 
-            PantallaInput(state)
+            PantallaInput()
 
             Spacer(modifier = Modifier.height(24.dp))
 

@@ -3,7 +3,6 @@
 
     <style name="Theme.Calculadora" parent="android:Theme.Material.Light.NoActionBar">
         <item name="android:statusBarColor">@color/statusBar</item>
-        <item name="android:windowLightStatusBar">@color/white</item>
         <item name="android:navigationBarColor">@color/navBar</item>
     </style>
 </resources>

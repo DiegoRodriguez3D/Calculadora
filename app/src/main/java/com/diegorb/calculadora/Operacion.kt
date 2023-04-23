@@ -6,4 +6,5 @@ sealed class Operacion (val symbol: String) {
     object Restar: Operacion("-")
     object Multiplicar: Operacion("x")
     object Dividir: Operacion("/")
+    object Porciento: Operacion("%")
 }

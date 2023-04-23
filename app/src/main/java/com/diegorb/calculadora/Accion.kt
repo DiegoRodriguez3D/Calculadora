@@ -7,5 +7,6 @@ sealed class Accion {
     object Limpiar: Accion()
     object Decimal: Accion()
     object Calcular: Accion()
-    data class Operacion(val operacion: Operacion): Accion()
+    object PositivoNegativo: Accion()
+    data class Operar(val operacion: Operacion): Accion()
 }
