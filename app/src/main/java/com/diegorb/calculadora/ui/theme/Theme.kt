@@ -3,6 +3,7 @@ package com.diegorb.calculadora.ui.theme
 import android.app.Activity
 import android.os.Build
 import androidx.annotation.RequiresApi
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.dynamicDarkColorScheme
@@ -18,33 +19,22 @@ import androidx.core.view.ViewCompat
 
 private val DarkColorScheme = darkColorScheme(
     primary = FondoCardOscuro,
-    secondary = FondoCardOscuro,
+    secondary = FondoBotonOscuro,
     tertiary = Color.White,
     background = FondoOscuro,
 )
 
 private val LightColorScheme = lightColorScheme(
     primary = FondoCardClaro,
-    secondary = FondoCardClaro,
+    secondary = FondoBotonClaro,
     tertiary = Color.Black,
     background = FondoClaro,
-
-
-    /* Other default colors to override
-    background = Color(0xFFFFFBFE),
-    surface = Color(0xFFFFFBFE),
-    onPrimary = Color.White,
-    onSecondary = Color.White,
-    onTertiary = Color.White,
-    onBackground = Color(0xFF1C1B1F),
-    onSurface = Color(0xFF1C1B1F),
-    */
 )
 
 @RequiresApi(Build.VERSION_CODES.Q)
 @Composable
 fun CalculadoraTheme(
-    darkTheme: Boolean = true,
+    darkTheme: Boolean = isSystemInDarkTheme(),
     // Dynamic color is available on Android 12+
     dynamicColor: Boolean = false,
     content: @Composable () -> Unit
@@ -60,10 +50,19 @@ fun CalculadoraTheme(
     val view = LocalView.current
     if (!view.isInEditMode) {
         SideEffect {
-            (view.context as Activity).window.statusBarColor = FondoOscuro.toArgb()
-            (view.context as Activity).window.navigationBarColor = FondoCardOscuro.toArgb()
-            ViewCompat.getWindowInsetsController(view)?.isAppearanceLightStatusBars = darkTheme
-            ViewCompat.getWindowInsetsController(view)?.isAppearanceLightNavigationBars = darkTheme
+            if (darkTheme) {
+                (view.context as Activity).window.statusBarColor = FondoOscuro.toArgb()
+                (view.context as Activity).window.navigationBarColor = FondoCardOscuro.toArgb()
+                ViewCompat.getWindowInsetsController(view)?.isAppearanceLightStatusBars = !darkTheme
+                ViewCompat.getWindowInsetsController(view)?.isAppearanceLightNavigationBars =
+                    !darkTheme
+            } else {
+                (view.context as Activity).window.statusBarColor = FondoClaro.toArgb()
+                (view.context as Activity).window.navigationBarColor = FondoCardClaro.toArgb()
+                ViewCompat.getWindowInsetsController(view)?.isAppearanceLightStatusBars = !darkTheme
+                ViewCompat.getWindowInsetsController(view)?.isAppearanceLightNavigationBars =
+                    !darkTheme
+            }
         }
     }
 

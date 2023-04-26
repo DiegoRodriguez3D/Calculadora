@@ -8,16 +8,10 @@ import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
-import com.diegorb.calculadora.Accion
-import com.diegorb.calculadora.screens.pricipal.CalculadoraState
-import com.diegorb.calculadora.ui.theme.FondoCardOscuro
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalComposeUiApi::class)
 @Composable
-fun CalculadoraContent(
-    state: CalculadoraState,
-    modifier: Modifier = Modifier,
-) {
+fun CalculadoraContent() {
 
     ConstraintLayout(modifier = Modifier.fillMaxSize()) {
         val (botones) = createRefs()
@@ -31,10 +25,10 @@ fun CalculadoraContent(
 
             PantallaInput()
 
-            Spacer(modifier = Modifier.height(24.dp))
+            Spacer(modifier = Modifier.height(12.dp))
 
             Card(
-                colors = CardDefaults.cardColors(FondoCardOscuro),
+                colors = CardDefaults.cardColors(MaterialTheme.colorScheme.primary),
                 shape = RoundedCornerShape(topStart = 32.dp, topEnd = 32.dp),
             ) {
                 GridBotones()

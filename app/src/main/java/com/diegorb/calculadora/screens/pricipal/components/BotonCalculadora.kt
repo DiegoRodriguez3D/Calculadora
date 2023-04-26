@@ -14,14 +14,12 @@ import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.diegorb.calculadora.ui.theme.FondoBotonOscuro
-import com.diegorb.calculadora.ui.theme.FondoCardOscuro
 
 @Composable
 fun BotonCalculadora(
     symbol: String = "",
     modifier: Modifier,
-    color: Color = MaterialTheme.colorScheme.onPrimary,
+    color: Color = MaterialTheme.colorScheme.tertiary,
     icon: Int? = null,
     roundness: Int = 8,
     onClick: () -> Unit
@@ -31,7 +29,7 @@ fun BotonCalculadora(
         shape = RoundedCornerShape(roundness.dp),
         border = BorderStroke(1.dp, Color.Transparent),
         contentPadding = PaddingValues(18.dp),
-        colors = ButtonDefaults.outlinedButtonColors(FondoBotonOscuro),
+        colors = ButtonDefaults.outlinedButtonColors(MaterialTheme.colorScheme.secondary),
         modifier = modifier
             .padding(5.dp)
             .size(70.dp)

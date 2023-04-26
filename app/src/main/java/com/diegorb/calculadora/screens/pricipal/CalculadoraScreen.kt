@@ -11,7 +11,5 @@ import com.diegorb.calculadora.screens.pricipal.components.CalculadoraContent
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
 fun CalculadoraScreen() {
-    val viewModel = viewModel<CalculadoraViewModel>()
-    val state = viewModel.state
-    Scaffold(topBar = {}, content = { CalculadoraContent(state) }, bottomBar = {})
+    Scaffold(topBar = {}, content = { CalculadoraContent() }, bottomBar = {})
 }
