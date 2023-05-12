@@ -1,4 +1,4 @@
-package com.diegorb.calculadora.screens.pricipal.components
+package com.diegorb.calculadora.screens.principal.components
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape

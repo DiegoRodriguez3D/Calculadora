@@ -1,11 +1,11 @@
-package com.diegorb.calculadora.screens.pricipal
+package com.diegorb.calculadora.screens.principal
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
-import com.diegorb.calculadora.Accion
-import com.diegorb.calculadora.Operacion
+import com.diegorb.calculadora.model.Accion
+import com.diegorb.calculadora.model.Operacion
 
 class CalculadoraViewModel : ViewModel() {
 

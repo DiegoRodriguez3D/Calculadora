@@ -5,7 +5,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.annotation.RequiresApi
-import com.diegorb.calculadora.screens.pricipal.CalculadoraScreen
+import com.diegorb.calculadora.screens.principal.CalculadoraScreen
 import com.diegorb.calculadora.ui.theme.CalculadoraTheme
 
 class MainActivity : ComponentActivity() {

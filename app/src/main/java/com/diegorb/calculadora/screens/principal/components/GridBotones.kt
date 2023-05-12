@@ -1,4 +1,4 @@
-package com.diegorb.calculadora.screens.pricipal.components
+package com.diegorb.calculadora.screens.principal.components
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.MaterialTheme
@@ -7,10 +7,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.diegorb.calculadora.Accion
+import com.diegorb.calculadora.model.Accion
 import com.diegorb.calculadora.BotonCalculadora
-import com.diegorb.calculadora.Operacion
-import com.diegorb.calculadora.screens.pricipal.CalculadoraViewModel
+import com.diegorb.calculadora.model.Operacion
+import com.diegorb.calculadora.screens.principal.CalculadoraViewModel
 import com.diegorb.calculadora.ui.theme.*
 
 @Composable

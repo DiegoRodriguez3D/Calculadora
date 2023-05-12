@@ -1,6 +1,6 @@
-package com.diegorb.calculadora.screens.pricipal
+package com.diegorb.calculadora.screens.principal
 
-import com.diegorb.calculadora.Operacion
+import com.diegorb.calculadora.model.Operacion
 
 //Contiene los numeros y la operacion que selecciona el usuario
 data class CalculadoraState(

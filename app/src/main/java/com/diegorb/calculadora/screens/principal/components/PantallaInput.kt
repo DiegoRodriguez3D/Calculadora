@@ -1,4 +1,4 @@
-package com.diegorb.calculadora.screens.pricipal.components
+package com.diegorb.calculadora.screens.principal.components
 
 import androidx.compose.foundation.border
 import androidx.compose.foundation.isSystemInDarkTheme
@@ -15,7 +15,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.diegorb.calculadora.screens.pricipal.CalculadoraViewModel
+import com.diegorb.calculadora.screens.principal.CalculadoraViewModel
 import com.diegorb.calculadora.ui.theme.Rojo
 
 @Composable

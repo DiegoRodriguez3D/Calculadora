@@ -1,4 +1,4 @@
-package com.diegorb.calculadora
+package com.diegorb.calculadora.model
 
 //Contiene las diferentes acciones que puede pulsar el usuario
 sealed class Accion {

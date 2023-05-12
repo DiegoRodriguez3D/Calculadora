@@ -1,4 +1,4 @@
-package com.diegorb.calculadora
+package com.diegorb.calculadora.model
 
 //Contiene los diferentes tipos de operacion que puede realizar el usuario
 sealed class Operacion(val symbol: String) {
